@@ -1,0 +1,241 @@
+/* GlobalProcess.module.css */
+.globalProcess {
+  position: relative;
+  min-height: 100vh;
+  height: 150vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+}
+
+.spaceBackground {
+  position: absolute;
+  inset: 0;
+  background: url("/global-process.png") center/cover no-repeat;
+  opacity: 0.8;
+  filter: blur(3px);
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7), black);
+}
+
+.contentContainer {
+  position: relative;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  height: 100%;
+}
+
+.orbitWrapper {
+  position: relative;
+  height: 100%;
+  max-width: 6xl;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orbitArea {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+.orbitArea:active {
+  cursor: grabbing;
+}
+
+.centralLogo {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoWrapper {
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid rgba(8, 145, 178, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(8, 145, 178, 0.3);
+}
+.logoImage {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+/* Process Card Styles */
+.cardContainer {
+  position: absolute;
+}
+.card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(8, 145, 178, 0.2);
+  overflow: hidden;
+}
+.activeCard {
+  border: 1px solid rgba(8, 145, 178, 0.5);
+  box-shadow: 0 0 25px rgba(8, 145, 178, 0.3);
+}
+.cardGlow {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  right: 0;
+  top: -5rem;
+  transition: all 0.7s;
+}
+.cardContent {
+  position: relative;
+  z-index: 10;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.iconWrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activeIcon {
+  background-color: rgba(8, 0, 0, 0.5);
+}
+.iconColor {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #00ffff;
+}
+.activeIconColor {
+  color: #e0ffff;
+}
+.cardNumber {
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+.activeTitle {
+  color: #cde0e0;
+}
+.description {
+  color: #d1d1d1;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.stats {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  color: #00bcd5;
+}
+.activeStats {
+  color: #cde0e0;
+  background-color: rgba(8, 0, 0, 0.5);
+}
+.cardBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+.activeBorder {
+  border: 1px solid rgba(8, 145, 178, 0.6);
+}
+
+/* Navigation Dots */
+.navigationDots {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 30;
+}
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(8, 0, 0, 0.8);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.activeDot {
+  background-color: #00ffff;
+  width: 2rem;
+}
+
+/* CTA Button */
+.ctaWrapper {
+  position: absolute;
+  bottom: 2rem;
+  right: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.ctaButton {
+  padding: 0.75rem 2rem;
+  background-color: #00ffff;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(8, 145, 178, 0.2);
+}
+
+/* Additional common classes can be added as needed */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+.orbitLine {
+  position: absolute;
+}
+.orbitSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
